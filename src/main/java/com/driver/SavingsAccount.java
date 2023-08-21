@@ -17,11 +17,9 @@ public class SavingsAccount extends BankAccount{
 
         if(amount > maxWithdrawalLimit)
         {
-            throw new RuntimeException("Maximum Withdraw Limit Exceed");
+            throw new Exception("Maximum Withdraw Limit Exceed");
         }
-        else {
-            super.withdraw(amount);
-        }
+        super.withdraw(amount);
     }
 
     public double getSimpleInterest(int years){

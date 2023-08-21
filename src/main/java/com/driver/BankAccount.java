@@ -19,7 +19,7 @@ public class BankAccount {
 
         if(sum > 9*digits)
         {
-            throw new RuntimeException("Account Number can not be generated");
+            throw new Exception("Account Number can not be generated");
         }
         else {
             int[] acc_no = new int[digits];
@@ -53,7 +53,7 @@ public class BankAccount {
         // Remember to throw "Insufficient Balance" exception, if the remaining amount would be less than minimum balance
         if(balance - amount < minBalance)
         {
-            throw new RuntimeException("Insufficient Balance");
+            throw new Exception("Insufficient Balance");
         }
         else {
             balance -= amount;

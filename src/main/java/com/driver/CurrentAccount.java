@@ -10,7 +10,7 @@ public class CurrentAccount extends BankAccount{
         super(name,balance,5000);
         if(balance < 5000)
         {
-            throw new RuntimeException("Insufficient Balance");
+            throw new Exception("Insufficient Balance");
         }
         this.tradeLicenseId = tradeLicenseId;
     }
@@ -34,7 +34,7 @@ public class CurrentAccount extends BankAccount{
             if(tradeLicenseId.charAt(i) == tradeLicenseId.charAt(i+1))
             {
                 if(newLicenceId())break;
-                else throw new RuntimeException("Valid License can not be generated");
+                else throw new Exception("Valid License can not be generated");
             }
         }
 
