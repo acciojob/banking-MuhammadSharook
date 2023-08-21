@@ -25,7 +25,7 @@ public class BankAccount {
             int[] acc_no = new int[digits];
             for(int i = 0; i < digits; i++)
             {
-                if(sum > 9)
+                if(sum >= 9)
                 {
                     acc_no[i] = 9;
                     sum -= 9;
